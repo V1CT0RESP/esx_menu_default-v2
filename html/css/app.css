@@ -1,0 +1,187 @@
+@font-face {
+    font-family: bankgothic;
+    src: url('../fonts/bankgothic.ttf');
+}
+
+body, .menu, .menu.align-bottom-right{
+    overflow:hidden;
+}
+
+.menu {
+    font-family: bankgothic;
+    min-width: 310px;
+    color: #fff;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.headtitle div{
+    display:none;
+}
+
+.headtitle span {
+    text-shadow:none;
+}
+
+.menu.align-left {
+    right: 20px;
+    bottom: 360px;
+}
+
+.menu.align-top-left {
+    right: 20px;
+    bottom: 360px;   
+}
+
+.menu.align-top {
+    right: 20px;
+    bottom: 360px;
+}
+
+.menu.align-top-right {
+    right: 20px;
+    bottom: 360px;
+}
+
+.menu.align-right {
+    right: 20px;
+    bottom: 360px;
+}
+
+.menu.align-bottom-right {
+    right: 20px;
+    bottom: 360px;
+}
+
+.menu.align-bottom {
+    right: 20px;
+    bottom: 360px;
+}
+
+.menu.align-bottom-left {
+    right: 20px;
+    bottom: 360px;
+}
+
+.menu.align-center {
+    right: 20px;
+    bottom: 360px;
+}
+
+.menu .head {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-size: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1.9vh;
+    text-shadow: 0 0 6px #ffffff;
+    padding: 13px 0px;
+    margin: 5px;
+}
+
+.anim-entrada{
+    animation: title 0.3s ease forwards;
+}
+
+
+.menu .menu-items {
+    max-height: 293px;
+    overflow-y: scroll;
+}
+
+.menu .menu-items .menu-item {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    color: black;
+    text-align: left;
+    font-size: 1.3vh;
+    border-radius: 3px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.2) 50%, rgb(0, 0, 0) 90%);
+    color: white;
+    box-shadow: 0 0 5px #000;
+    border-color: black;
+    margin: 0 5px 5px 5px;
+    padding-left:7px;
+}
+
+
+.menu .menu-items .menu-item.selected {
+   
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+    color: black;
+    animation: itemselect 0.3s ease 1 forwards;
+    transform:scale(1.05);
+    font-size: 1.5vh;
+    height: 35px;
+    line-height: 35px;
+    text-shadow: 0 0 6px #ffffff;    
+}
+
+  .abrirMenu{
+    animation: abrirMenu forwards 0.5s !important;
+  }
+  .cerrarMenu{
+    animation: cerrarMenu forwards 0.5s !important;
+  }
+  
+
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;  
+}
+
+.botones{
+    position:absolute;
+    right:5px;
+    
+}
+
+@keyframes abrirMenu{
+    from {
+        opacity: 0;
+        transform: translate(0px, 50px);
+    }
+    to {
+        opacity: 100;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes cerrarMenu {
+    from {
+        opacity: 100;
+        transform: translate(0px, 0px);
+    }
+    to {
+        opacity: 0;
+        transform: translate(0px, 50px);
+    }
+}
+
+
+
+@keyframes itemselect {
+    0%{transform:translate(0, 0) rotate(0)}
+    15%{transform:translate(4px, 2px) rotate(-.1deg)}
+    30%{transform:translate(3px, -5px) rotate(0.5deg)}
+    50%{transform:translate(4px, -3px) rotate(-.5deg)}
+    70%{transform:translate(-3px, 3px) rotate(1.2deg)}
+   
+    85%{transform:translate(-3px, 3px) rotate(1.2deg)}
+    100%{transform:translate(0, 0) rotate(0); background-color:white;}
+  }
+
+  @keyframes title {
+    from {
+        opacity: 0;
+        transform: translate(0px, 50px);
+    }
+    to {
+        opacity: 100;
+        transform: translate(0px, 0px);
+    }
+}

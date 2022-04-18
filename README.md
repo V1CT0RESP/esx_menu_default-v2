@@ -1,5 +1,5 @@
 # esx_menu_default-v2
-ESX Menu Default V1
+ESX Menu Default V2
 
 Credits: V1CT0R#4220
 
